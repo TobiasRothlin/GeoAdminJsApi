@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoAdminApi3</title>
+    <script src="GeoAdminApi3.js"></script>
+    <style>
+        body
+        {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        .main
+        {
+            display: grid;
+            justify-content: center;
+        }
+
+        input
+        {
+            font-size: 30px;
+        }
+
+        .functionName
+        {
+            font-size: 30px;
+        }
+
+        h1
+        {
+            font-size: 60px;
+        }
+
+        .IntroText
+        {
+            font-size: 25px;
+        }
+        
+        h6
+        {
+            font-size: 15px;
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .function
+        {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Main">
+        <h1>Example GeoAdminApi3</h1>
+        <label class="IntroText">To see the GeoAdminApi3 in action, open the console in the browser!</label>
+
+        <h6>need help opening the console?</h6>
+        <a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console"  target="_blank">Firefox</a>
+        <a href="https://balsamiq.com/support/faqs/browserconsole/"  target="_blank">Safari</a>
+        <a href="https://developer.chrome.com/docs/devtools/open/"  target="_blank">Chrome</a>
+        <div class="function">
+            <label class="functionName">getListCoordinates(</label>
+            <input type="text" placeholder="searchString" id="getListCoordinatesTextField">
+            <label class="functionName">)</label>
+        </div>
+
+        <div class="function">
+            <label class="functionName">getNumberOfResults(</label>
+            <input type="text" placeholder="searchString" id="getNumberOfResultsTextField">
+            <label class="functionName">)</label>
+        </div>
+
+        <div class="function">
+            <label class="functionName">isValidAddress(</label>
+            <input type="text" placeholder="searchString" id="isValidAddressTextField">
+            <label class="functionName">)</label>
+        </div>
+        
+    </div>
+</body>
+<script>
+    document.getElementById("getListCoordinatesTextField").addEventListener("keydown", textChanged);
+    document.getElementById("getNumberOfResultsTextField").addEventListener("keydown", textChanged);
+    document.getElementById("isValidAddressTextField").addEventListener("keydown", textChanged);
+
+    async function textChanged(e)
+    {
+        console.log("%c New event textDidChange!", "color:red");
+        console.log(e);
+        if(e.srcElement.id === "getListCoordinatesTextField")
+        {
+            console.log("%c getListCoordinates" , "color:green");
+            let result = await getListCoordinates(document.getElementById("getListCoordinatesTextField").value);
+            console.log(result);
+            //Do Stuff with the result!
+        }
+
+        else if(e.srcElement.id === "getNumberOfResultsTextField")
+        {
+            console.log("%c getNumberOfResults" , "color:green");
+            let result = await getNumberOfResults(document.getElementById("getNumberOfResultsTextField").value);
+            console.log(result);
+            //Do Stuff with the result!
+        }
+
+        else if(e.srcElement.id === "isValidAddressTextField")
+        {
+            console.log("%c isValidAddress" , "color:green");
+            let result = await isValidAddress(document.getElementById("isValidAddressTextField").value);
+            console.log(result);
+            //Do Stuff with the result!
+        }
+    }
+</script>
+</html>

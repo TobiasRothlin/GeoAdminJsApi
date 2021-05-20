@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "16adccb9-a2e7-4307-9a85-e8f008e5570a",
+		"name": "GeoAdminApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "convert address to coordinates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api3.geo.admin.ch/1912100956/rest/services/ech/SearchServer?sr=2056&searchText=PeterliWiese 33 8855&lang=en&type=locations",
+					"protocol": "https",
+					"host": [
+						"api3",
+						"geo",
+						"admin",
+						"ch"
+					],
+					"path": [
+						"1912100956",
+						"rest",
+						"services",
+						"ech",
+						"SearchServer"
+					],
+					"query": [
+						{
+							"key": "sr",
+							"value": "2056"
+						},
+						{
+							"key": "searchText",
+							"value": "PeterliWiese 33 8855"
+						},
+						{
+							"key": "lang",
+							"value": "en"
+						},
+						{
+							"key": "type",
+							"value": "locations"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
