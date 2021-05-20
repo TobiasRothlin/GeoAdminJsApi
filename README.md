@@ -2,6 +2,8 @@
 
 This collection currently contains four functions. These functions are designed to interact with the [geo.admin Api3](https://api3.geo.admin.ch).
 
+To test the functions implemented in this js file. I exported the postman json collection I used and added to this repo (GeoAdminApi.postman_collection.json).
+
 ## Overview
 
 The four functions are:
