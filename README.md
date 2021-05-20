@@ -95,7 +95,7 @@ This function will return the number of results found with the provided **search
 #### searchString: "Peterliwiese 33"
 *spaces will be encoded!*
 
-#### Response: List
+#### Response: number
 ```json
 1
 ```
@@ -107,7 +107,7 @@ This function will return the number of results found with the provided **search
 #### searchString: "Peterliwiese 33"
 *spaces will be encoded!*
 
-#### Response: List
+#### Response: boolean
 ```json
 true
 ```
